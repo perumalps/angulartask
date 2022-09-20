@@ -9,7 +9,8 @@ import { HeaderComponent } from './header.componet.ts/header.component';
 import { MainComponent } from './main.component.ts/main.component';
 import { SlidbarComponent } from './slidbar.component.ts/slidbar.component';
 import { ChildComponent } from './child/child.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { UsersListComponent } from './user-list/user-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 
@@ -22,7 +23,8 @@ import { UserListComponent } from './user-list/user-list.component';
     SlidbarComponent,
     MainComponent,
     ChildComponent,
-    UserListComponent
+    UsersListComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

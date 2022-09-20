@@ -1,25 +1,21 @@
-
-
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 interface User {
   id : number,
   email : string,
   first_name : string,
   last_name :  string,
   avatar : string
-
 }
+
 @Component({
   selector: 'app-users-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
-export class UserListComponent implements OnInit {
-  @Input() userIndex: any;
-  @Input() userList: any; 
-
+export class UsersListComponent implements OnInit {
   usersList:User[] = [];
   constructor() { }
+
   ngOnInit() {
     this.usersList = [
       {

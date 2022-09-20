@@ -1,5 +1,6 @@
 <p>user-list works!</p>
 
+
 <ng-container *ngFor="let user of usersList,index as i">
-    <app-users-list [userList]="user" [userIndex]="i" (removeUserEvent)="userRemoved($event)"></app-users-list>
+    <app-user-detail [userDetail]="user" [userIndex]="i" (removeUserEvent)="userRemoved($event)"></app-user-detail>
 </ng-container>
