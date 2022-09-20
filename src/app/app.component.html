@@ -10,3 +10,10 @@
 <div class="main">
   <main-app></main-app>
 </div>
+<div class="child">
+  <app-child [input]="value" (addNewUser)="print($event)"></app-child>
+</div>
+<p>{{printEvent}}</p>
+<div class="list">
+  <app-users-list ></app-users-list>
+</div>

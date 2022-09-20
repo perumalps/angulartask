@@ -8,6 +8,11 @@ import { FooterComponent } from './header.componet.ts/footer.component.ts/footer
 import { HeaderComponent } from './header.componet.ts/header.component';
 import { MainComponent } from './main.component.ts/main.component';
 import { SlidbarComponent } from './slidbar.component.ts/slidbar.component';
+import { ChildComponent } from './child/child.component';
+import { UserListComponent } from './user-list/user-list.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +20,9 @@ import { SlidbarComponent } from './slidbar.component.ts/slidbar.component';
     HeaderComponent,
     FooterComponent,
     SlidbarComponent,
-    MainComponent
+    MainComponent,
+    ChildComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

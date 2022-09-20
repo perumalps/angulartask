@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first';
+  value = 'values';
+  printEvent='';
+  print (event:string){
+    console.log(event);
+    this.printEvent = event;
+    
+  }
 }
