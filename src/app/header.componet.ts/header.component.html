@@ -1,3 +1,24 @@
 <div class="header">
 <h1>header</h1>
 </div>
+<p>{{content}}</p>
+<label>userName</label>
+   <input type="text" placeholder="serch"(keyup)="onclick($event)">
+   <p (click)="toggle()">click me</p>
+   <button [disabled] = "isDisabled" >clickme</button>
+   <input type="text" placeholder="hello" [(ngModel)] = "value"> <p>{{value}} </p>
+    <p (click)="isActive = !isActive" [ngStyle]="{'color':isActive?'red':'blue'}">this content is very usefull for read</p>
+    <p [ngClass]="isActive?'color':'font'">subText</p>
+
+    <p *ngIf="isActive; else elseBlock" >subText</p>
+    <ng-template #elseBlock>this is else block</ng-template>
+
+<ul>
+    <!-- <li>dev</li>
+    <li>yc</li>
+    <li>kd</li> -->
+
+    <li *ngFor="let color of colors,index as i,first as isFirst,">{{color}}-{{i}}-{{isFirst}} <span [ngStyle]="{'color':isFirst?'red':'blue'}">sample</span></li>
+    
+</ul>
+    
