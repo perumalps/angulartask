@@ -17,11 +17,17 @@
 <!-- <div class="list">
   <app-users-list ></app-users-list>
 </div> -->
-<div class="li-input">
+<!-- <div class="li-input">
   <app-input-box (addTaskEvent)="addTasks($event)"></app-input-box>
   <button (click)="saveToBackend()"   >saveToBackend</button>
 </div>
 <ng-container *ngFor="let task of taskList">
 <app-checked-box [line]="task"></app-checked-box>
 
-</ng-container>
+</ng-container> -->
+<router-outlet></router-outlet>
+<ul class="style">
+  <li><a routerLink="/aboutus">aboutus</a></li>
+  <li><a routerLink="/contectus">contactus</a></li>
+  <li><a routerLink="#">home</a></li>
+</ul>

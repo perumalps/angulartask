@@ -24,3 +24,12 @@
  #ps2{
     text-align: left;
  }
+ .style{
+    text-align: center;
+    border: 3px solid red;
+    background-color: orange;
+    display:flex;
+    justify-content: space-between;
+    height: 30px;
+    width: 1150px;
+ }

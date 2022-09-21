@@ -13,6 +13,10 @@ import { UsersListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { CheckedBoxComponent } from './checked-box/checked-box.component';
 import { InputBoxComponent } from './input-box/input-box.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
+import { ContectusComponent } from './contectus/contectus.component';
 
 
 
@@ -28,7 +32,11 @@ import { InputBoxComponent } from './input-box/input-box.component';
     UsersListComponent,
     UserDetailComponent,
     CheckedBoxComponent,
-    InputBoxComponent
+    InputBoxComponent,
+    AboutusComponent,
+    Component1Component,
+    Component2Component,
+    ContectusComponent
   ],
   imports: [
     BrowserModule,
