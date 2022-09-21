@@ -11,6 +11,8 @@ import { SlidbarComponent } from './slidbar.component.ts/slidbar.component';
 import { ChildComponent } from './child/child.component';
 import { UsersListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { CheckedBoxComponent } from './checked-box/checked-box.component';
+import { InputBoxComponent } from './input-box/input-box.component';
 
 
 
@@ -24,7 +26,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MainComponent,
     ChildComponent,
     UsersListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    CheckedBoxComponent,
+    InputBoxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-  <div class="container">
+  <!-- <div class="container">
     <btn-app></btn-app>
   </div>
 <div class="footer">
@@ -13,7 +13,15 @@
 <div class="child">
   <app-child [input]="value" (addNewUser)="print($event)"></app-child>
 </div>
-<p>{{printEvent}}</p>
-<div class="list">
+<p>{{printEvent}}</p> -->
+<!-- <div class="list">
   <app-users-list ></app-users-list>
+</div> -->
+<div class="li-input">
+  <app-input-box (addTaskEvent)="addTasks($event)"></app-input-box>
+  <button (click)="saveToBackend()"   >saveToBackend</button>
 </div>
+<ng-container *ngFor="let task of taskList">
+<app-checked-box [line]="task"></app-checked-box>
+
+</ng-container>
