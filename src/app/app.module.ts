@@ -17,6 +17,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { ContectusComponent } from './contectus/contectus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -36,7 +37,8 @@ import { ContectusComponent } from './contectus/contectus.component';
     AboutusComponent,
     Component1Component,
     Component2Component,
-    ContectusComponent
+    ContectusComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
