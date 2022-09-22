@@ -25,9 +25,15 @@
     text-align: left;
  }
  .style{
-    border: 3px solid blue;
-    background-color: orange;
+    border: 3px solid white;
+    background-color: blue;
     display: flex;
     justify-content: space-between;
-    height: 30px;
+    height: 40px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
  }
+ 

@@ -15,9 +15,9 @@ const routes: Routes = [
       component : Component1Component
     },
     {
-      path : ':yc',
-      component : Component2Component
-    }
+      path : ':user',
+      component : Component1Component
+    } 
   ] 
   },
   {
