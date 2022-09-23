@@ -11,7 +11,7 @@ export class AboutusComponent implements OnInit {
  
   ngOnInit() {
   }
-  click(event:any){
-    console.log(event.target.value);
+  navigate() : void{
+    console.log("navigated");
   }
 }

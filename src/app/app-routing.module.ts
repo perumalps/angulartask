@@ -5,6 +5,7 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { ContectusComponent } from './contectus/contectus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UsersListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
     children : [{
       path : 'component1',
       component : Component1Component
+    },{
+      path : 'user-list',
+      component : UsersListComponent
     },
     {
       path : ':user',
@@ -33,6 +37,8 @@ const routes: Routes = [
     path : '**',
     component : PageNotFoundComponent
   }
+  
+  
 ];
 
 @NgModule({
