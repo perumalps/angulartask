@@ -11,7 +11,7 @@ export class AboutusComponent implements OnInit {
  
   ngOnInit() {
   }
-  navigate() : void{
-    console.log("navigated");
-  }
+  // navigate() : void{
+  //   console.log("navigated");
+  // }
 }
