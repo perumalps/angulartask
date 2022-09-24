@@ -27,6 +27,7 @@ const routes: Routes = [
       path : ':user',
       component : Component1Component
     } 
+
   ] 
   },
   {
@@ -36,8 +37,13 @@ const routes: Routes = [
   {
     path : '**',
     component : PageNotFoundComponent
+  },
+  {
+    path : 'module',
+    loadChildren:()=> import('./new-module/new-module-routing.module').then(data =>data.NewModuleRoutingModule)
+    
+    
   }
-  
   
 ];
 
