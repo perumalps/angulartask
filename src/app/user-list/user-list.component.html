@@ -4,5 +4,5 @@
 <ng-container *ngFor="let user of usersList,index as i">
     <app-user-detail [userDetail]="user" [userIndex]="i" (removeUserEvent)="userRemoved($event)"></app-user-detail>
 </ng-container>
-<a routerLink="/">click here</a>
+<a routerLink="/">click here </a>
 <router-outlet></router-outlet>

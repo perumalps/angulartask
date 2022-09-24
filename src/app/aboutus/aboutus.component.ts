@@ -1,4 +1,5 @@
 import { Component, VERSION, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-aboutus',
   templateUrl: './aboutus.component.html',
@@ -6,7 +7,7 @@ import { Component, VERSION, Input, OnInit } from '@angular/core';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor(){}
+  constructor(private router:Router){}
   
  
   ngOnInit() {
