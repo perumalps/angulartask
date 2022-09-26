@@ -1,0 +1,16 @@
+<!-- <p>form works!</p> -->
+
+<table>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+    <th>message</th>
+    <tbody>
+    <tr *ngFor="let user of userList">
+        <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.message}}</td>
+    </tr>
+</tbody>
+  </table>

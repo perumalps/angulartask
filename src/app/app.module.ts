@@ -18,6 +18,11 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { ContectusComponent } from './contectus/contectus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormComponent } from './form/form.component';
+import {HttpClientModule} from  '@angular/common/http';
+import { AddUserComponent } from './add-user/add-user.component'
+
+
 
 
 
@@ -38,12 +43,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     Component1Component,
     Component2Component,
     ContectusComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormComponent,
+    AddUserComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
