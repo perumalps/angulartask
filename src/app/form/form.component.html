@@ -5,12 +5,17 @@
     <th>name</th>
     <th>email</th>
     <th>message</th>
+    
     <tbody>
     <tr *ngFor="let user of userList">
         <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
       <td>{{user.message}}</td>
+      <td>
+        <span><button type="button" (click)="editUser(user.id)">edit</button></span>
+        <span><button type="button" (click)="deleteUser(user.id)">Delete</button></span>
+      </td>
     </tr>
 </tbody>
   </table>

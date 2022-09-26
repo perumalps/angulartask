@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-add-user',
@@ -10,7 +11,7 @@ use:any
  name:any;
  email:any;
  message:any 
-  constructor() {
+  constructor(private appservice:AppService) {
   }
 
   ngOnInit(): void {
@@ -20,7 +21,13 @@ use:any
    'name' :this.name,
   'email' : this.email,
   'message' : this.message
+
     }
+
+    this.appservice.insertUser(this.use).subscribe(data =>{
+      console.log(data);
+      this.use=data;
+    })
   }
 }
 
