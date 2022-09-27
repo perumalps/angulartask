@@ -39,6 +39,10 @@ const routes: Routes = [
         path : 'add-user',
         component : AddUserComponent
       },
+      {
+        path : 'form/user/:userId',
+        component : AddUserComponent
+      },
   {
     path : 'contectus',
     component : ContectusComponent

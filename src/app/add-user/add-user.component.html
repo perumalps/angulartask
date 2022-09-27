@@ -8,5 +8,9 @@
     <p>message :
         <input type="text" [(ngModel)]="message" placeholder="message">
     </p>
-    <button (click)="addUser()">addUser</button>
+
+    <div>
+        <button *ngIf="isEdit" (click)="editUser()">edit User</button>
+        <button *ngIf="!isEdit" (click)="addUser()">Add User</button>
+    </div>    
    

@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 })
 export class FormComponent implements OnInit {
   userList:any;
-  
+  userId:number=0;
   constructor(private appService:AppService,private router:Router,private aRoute:ActivatedRoute ) { }
 
   ngOnInit() {
@@ -20,13 +20,14 @@ export class FormComponent implements OnInit {
     console.log(data);
     this.userList = data;
    })
+  }
   
-  }
   editUser(userId : number){
-    this.router.navigate(['edit-user',userId],{relativeTo:this.aRoute})
+    this.router.navigate(['user',userId],{relativeTo:this.aRoute})
   }
-  deleteUser(userId : number){
-    this.appService.deleteUser(userId).subscribe((userList)=>{
+  deleteUser(userId:number){
+    this.userId=userId
+    this.appService.deleteUser(this.userId).subscribe((userList)=>{
       this.getAllUser()
     })
   }
