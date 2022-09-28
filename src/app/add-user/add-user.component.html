@@ -7,12 +7,12 @@
     <p style="color: red;">error in input feild</p>
 </ng-container>
 <p>email : </p>
-    <input type="text" name="user.email" required [(ngModel)]="user.email" #name="ngModel" placeholder="email">
+    <input type="text" name="user.email" required [(ngModel)]="user.email" #email="ngModel" placeholder="email">
     <ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
         <p style="color: red;">error in input field</p>
     </ng-container>
     <p>message : </p>
-        <input type="text" name="message" required [(ngModel)]="user.message" #name="ngModel" placeholder="message">
+        <input type="text" name="message" required [(ngModel)]="user.message" #message="ngModel" placeholder="message">
         <ng-container *ngIf="message.invalid && (message.touched || message.dirty)">
        <p style="color: red;">error in input field</p>
         </ng-container>
