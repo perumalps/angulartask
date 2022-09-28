@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppService } from '../app.service';
 
@@ -8,7 +9,8 @@ import { AppService } from '../app.service';
   styleUrls: ['./add-user.component.scss']
 })
 export class AddUserComponent implements OnInit {
-use:any
+  user:any;
+  use:any
  name:any;
  email:any;
  message:any 
@@ -25,6 +27,13 @@ use:any
       if(this.isEdit){
       this.getUserById()
       }
+    })
+    
+    this.user = new FormGroup({
+      name: new FormControl ([null,[Validators.required,Validators.minLength(4)]]),
+      email: new FormControl([null,[Validators.required,Validators.email]]),
+      message: new FormControl([null,[Validators.required,Validators.minLength(4)]]),
+
     })
   }
   addUser():void{

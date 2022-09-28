@@ -1,16 +1,26 @@
 <!-- <p>add-user works!</p> -->
-<p>name :
-<input type="text" [(ngModel)]="name" placeholder="name">
-</p>
-<p>email : 
-    <input type="text" [(ngModel)]="email" placeholder="email">
-</p>
-    <p>message :
-        <input type="text" [(ngModel)]="message" placeholder="message">
-    </p>
+
+<p>name : </p>
+<input type="text" name="name" required [(ngModel)]="user.name" #name="ngModel" placeholder="name">
+
+<ng-container *ngIf="name.invalid && (name.touched || name.dirty)">
+    <p style="color: red;">error in input feild</p>
+</ng-container>
+<p>email : </p>
+    <input type="text" name="user.email" required [(ngModel)]="user.email" #name="ngModel" placeholder="email">
+    <ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
+        <p style="color: red;">error in input field</p>
+    </ng-container>
+    <p>message : </p>
+        <input type="text" name="message" required [(ngModel)]="user.message" #name="ngModel" placeholder="message">
+        <ng-container *ngIf="message.invalid && (message.touched || message.dirty)">
+       <p style="color: red;">error in input field</p>
+        </ng-container>
+   
+
 
     <div>
         <button *ngIf="isEdit" (click)="editUser()">edit User</button>
-        <button *ngIf="!isEdit" (click)="addUser()">Add User</button>
+        <button *ngIf="!isEdit" (click)="addUser()" [disabled]="name.invalid">Add User</button>
     </div>    
    
