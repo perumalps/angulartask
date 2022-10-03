@@ -69,10 +69,9 @@ export class AddUserComponent implements OnInit {
    this.appservice.getById(this.id).subscribe(data =>{
     console.log(data);
     this.use= data;
-    this.name = this.use[0]['name']
-      this.email = this.use[0]['email']
-      this.message = this.use[0]['message']
-   })
+    this.name = this.use[0]?.name
+      this.email = this.use[0]?.email
+      this.message = this.use[0]?.message   })
   }
   editUser():void{
     this.appservice.editUser({id:this.id,name:this.name,email:this.email,message:this.message}).subscribe((newUser)=>{

@@ -1,22 +1,24 @@
-<!-- <p>form works!</p> -->
-
-<table>
-    <th>id</th>
-    <th>name</th>
-    <th>email</th>
-    <th>message</th>
-    
-    <tbody>
-    <tr *ngFor="let user of userList">
-        <td>{{user.id}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.message}}</td>
-      <td>
-        <span><button type="button" (click)="editUser(user.id)">edit</button></span>
-        <span><button type="button" (click)="deleteUser(user.id)">Delete</button></span>
-      </td>
+<p-table [value]="userList" (sortFunction)="customSort($event)" [customSort]="true">
+  <ng-template pTemplate="header">
+    <thead>
+    <tr>
+      <th pSortableColumn="id">id<p-sortIcon field="id"></p-sortIcon></th>
+      <th pSortableColumn="name">name<p-sortIcon field="name"></p-sortIcon></th>
+      <th pSortableColumn="email">email<p-sortIcon field="email"></p-sortIcon></th>
+      <th pSortableColumn="message">message<p-sortIcon field="message"></p-sortIcon></th>
     </tr>
-</tbody>
-  </table>
-
+  </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.message}}</td>
+        <td>
+          <span><button type="button" (click)="editUser(user.id)">edit</button></span>
+          <span><button type="button" (click)="deleteUser(user.id)">Delete</button></span>
+        </td>
+      </tr>
+    </tbody>
+  </ng-template>
+</p-table>

@@ -21,11 +21,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormComponent } from './form/form.component';
 import {HttpClientModule} from  '@angular/common/http';
 import { AddUserComponent } from './add-user/add-user.component'
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
 
-
-
-
-
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -44,8 +44,9 @@ import { AddUserComponent } from './add-user/add-user.component'
     Component2Component,
     ContectusComponent,
     PageNotFoundComponent,
-    FormComponent,
+    FooterComponent,
     AddUserComponent,
+    FormComponent
     
     
   ],
@@ -53,9 +54,14 @@ import { AddUserComponent } from './add-user/add-user.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    TableModule,
+    ButtonModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

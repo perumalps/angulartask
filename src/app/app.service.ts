@@ -21,7 +21,7 @@ export class AppService {
     return this.httpClient.put('http://localhost:3000/update',userDetail)
   }
   deleteUser(userId : any){
-    return this.httpClient.delete('http://localhost:3000/delete?id='+ userId)
+    return this.httpClient.delete('http://localhost:3000/erase?id='+ userId)
   }
 }
 
