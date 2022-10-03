@@ -29,12 +29,27 @@ export class AddUserComponent implements OnInit {
       }
     })
     
-    this.user = new FormGroup({
-      name: new FormControl ([null,[Validators.required,Validators.minLength(4)]]),
-      email: new FormControl([null,[Validators.required,Validators.email]]),
-      message: new FormControl([null,[Validators.required,Validators.minLength(4)]]),
+    // this.user = new FormGroup({
+    //   name: new FormControl ([null,[Validators.required,Validators.minLength(4)]]),
+    //   email: new FormControl([null,[Validators.required,Validators.email]]),
+    //   message: new FormControl([null,[Validators.required,Validators.minLength(4)]]),
 
-    })
+    // })
+    // this.user = this.form.group({
+    //   name:[null,[Validators.required,Validators.minLength(4)]],
+    //   email:[null,[Validators.required,Validators.email]],
+    //   message:[null,[Validators.required,Validators.minLength(4)]]
+    // })
+
+    // this.route.params.subscribe((user)=>{
+    //   console.log(user)
+    //   this.isEdit = user.hasOwnProperty('userId')? true:false
+
+    //   if(this.isEdit){
+    //     this.id = user['userId']
+    //     this.getUserById()
+    //   }
+    // })
   }
   addUser():void{
     this.use={
@@ -65,5 +80,8 @@ export class AddUserComponent implements OnInit {
       this.router.navigate(['../'])
     })
 }
+// get form(){
+//   return this.user.controls
+// }
 }
 

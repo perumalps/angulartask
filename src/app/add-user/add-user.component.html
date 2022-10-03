@@ -1,26 +1,45 @@
-<!-- <p>add-user works!</p> -->
+<!-- <p>add-user works!</p>
+<div [FormGroup]="user">
+
+<p> name</p>
+<input type="text" name="name" formControlName="name" placeholder="name">
+<ng-container *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
+<p style="color: red;" *ngIf="form['name'].errors?.required">name is required</p>
+<p style="color: red;" *ngIf="form['name'].errors?.minlength">letter should be minimum four</p>
+</ng-container>
+<p>email</p>
+<input type="tetx" name="email" formArrayName="email" placeholder="email">
+<ng-container *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+    <p style="color: red;" *ngIf="form['email'].errors?.required">email should be valid</p>
+</ng-container>
+<p>message</p>
+<input type="tetx" name="message" formArrayName="message" placeholder="message">
+<ng-container *ngIf="form['message'].invalid && (form['message'].touched || form['message'].dirty)">
+    <p style="color: red;" *ngIf="form['message'].errors?.required">message is required</p>
+    <p style="color: red;" *ngIf="form['message'].errors?.minlength">message should be minimum four</p>
+
+</ng-container>
+</div> -->
 
 <p>name : </p>
-<input type="text" name="name" required [(ngModel)]="user.name" #name="ngModel" placeholder="name">
-
+<input type="text"  [(ngModel)]="name"  placeholder="name">
+<!-- 
 <ng-container *ngIf="name.invalid && (name.touched || name.dirty)">
     <p style="color: red;">error in input feild</p>
-</ng-container>
+</ng-container> -->
 <p>email : </p>
-    <input type="text" name="user.email" required [(ngModel)]="user.email" #email="ngModel" placeholder="email">
-    <ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
+    <input type="text"  [(ngModel)]="email"  placeholder="email">
+    <!-- <ng-container *ngIf="email.invalid && (email.touched || email.dirty)">
         <p style="color: red;">error in input field</p>
-    </ng-container>
+    </ng-container> -->
     <p>message : </p>
-        <input type="text" name="message" required [(ngModel)]="user.message" #message="ngModel" placeholder="message">
-        <ng-container *ngIf="message.invalid && (message.touched || message.dirty)">
+        <input type="text"  [(ngModel)]="message"  placeholder="message">
+        <!-- <ng-container *ngIf="message.invalid && (message.touched || message.dirty)">
        <p style="color: red;">error in input field</p>
-        </ng-container>
-   
-
+        </ng-container> -->
 
     <div>
         <button *ngIf="isEdit" (click)="editUser()">edit User</button>
-        <button *ngIf="!isEdit" (click)="addUser()" [disabled]="name.invalid">Add User</button>
+        <button *ngIf="!isEdit" (click)="addUser()">Add User</button>
     </div>    
-   
+    
