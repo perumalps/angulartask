@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableModule } from 'primeng/table';
 
 import {ButtonModule} from 'primeng/button';
+import { MoneyTrackingComponent } from './money-tracking/money-tracking.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {ButtonModule} from 'primeng/button';
     PageNotFoundComponent,
     FooterComponent,
     AddUserComponent,
-    FormComponent
+    FormComponent,
+    MoneyTrackingComponent
     
     
   ],

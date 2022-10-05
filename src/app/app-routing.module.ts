@@ -6,6 +6,7 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { ContectusComponent } from './contectus/contectus.component';
 import { FormComponent } from './form/form.component';
+import { MoneyTrackingComponent } from './money-tracking/money-tracking.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UsersListComponent } from './user-list/user-list.component';
 
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path : 'form/user/:userId',
         component : AddUserComponent
+      },
+      {
+        path : 'money',
+        component : MoneyTrackingComponent
       },
   {
     path : 'contectus',
